@@ -11,9 +11,9 @@ import todoImage from './todo.png'; // Import  Todo project image
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1500, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Animation easing function
-      offset: 120, // Offset from trigger point
+      duration: 1500, 
+      easing: 'ease-in-out', 
+      offset: 120, 
     });
   }, []);
 
@@ -37,7 +37,7 @@ function Header() {
       </div>
       <h1 className="joshua">Joshua Remorosa</h1>
       <p>Web Developer | Designer | Tech Enthusiast</p>
-      <nav>
+      <nav className='nav-links'>
         <Link to="about" smooth={true} duration={500}>About</Link>
         <Link to="skills" smooth={true} duration={500}>Skills</Link>
         <Link to="projects" smooth={true} duration={500}>Projects</Link>

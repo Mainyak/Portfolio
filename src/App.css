@@ -25,104 +25,53 @@ body {
   color: white; /* Change color to ensure visibility over the GIF */
 }
 
-header, .about, .skills-container, .projects, .contact, footer {
-   /* Apply a translucent background to make the content stand out */
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 900px;
+header, section, footer {
+  padding: 3rem;
 }
 
-
 header {
-  
-  color: #1f2833; /* Updated text color */
-  padding: 1.5rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-holder div {
+  width: 100%;
 }
 
 .image-holder img {
-  max-width: 100%; /* Ensure image is responsive */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Updated Header Styles */
-header h1.joshua {
-  font-size: 40px; /* Custom font size for Joshua Remorosa */
-  color: white; /* Customize color if needed */
+  width: 60%;
 }
 
 header h1 {
-  margin: 0;
-  color: #1f2833; /* Updated text color inside header */
-  font-size: 50px; /* Set font size for the main heading */
+  font-size: 2rem;
 }
 
 header p {
-  margin: 0.5rem 0;
-  color: white; /* Updated text color inside header */
-  font-size: 38px; /* Set font size for the paragraph */
+  font-size: 1.5rem;
 }
 
-nav a {
-  color: #1f2833; /* Updated navigation link color */
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 1.2rem;
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1rem;
 }
-
-.header nav a {
-  color: white; /* Change this to your desired text color */
-  text-decoration: none; /* Remove underline from links */
-  padding: 8px 15px; /* Add padding for better spacing */
-  border-radius: 20px; /* Rounded corners for a softer look */
-  font-size: 30px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
-
 
 .header nav a:hover {
   background-color: #66fcf1; /* Change background color on hover */
   color: #000000; /* Change text color on hover if needed */
 }
 
-/* Updated .about Section */
-.about {
-  padding: 2rem;
-  color: white; /* Updated text color */
-  font-size: 30px; /* Adjust the font size as needed */
+.header nav a {
+  color: white; /* Change this to your desired text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: .5rem; /* Add padding for better spacing */
+  border-radius: 20px; /* Rounded corners for a softer look */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  cursor: pointer;
 }
 
-.projects,
-.contact {
-  padding: 2rem;
-  font-size: 30px;
-  color: white;
-}
-
-/* Skills Section */
-.skills-container {
-  max-width: 800px; /* Medium size width */
-  margin: 0 auto; /* Center the box horizontally */
-  padding: 2rem; /* Padding inside the container */
-  
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-  color: white; /* Light text color */
-}
-
-.skills-container h2 {
-  text-align: center; /* Center the Skills heading */
-  margin-bottom: 2rem;
-  font-size: 50px;
-  color: white; /* Optional: A vibrant color for the heading */
-}
-
-.skill {
-  margin-bottom: 1.5rem; /* Spacing between each skill */
-}
-
-/* Skill Bar */
 .skill-bar {
   background-color: white;
   border-radius: 25px;
@@ -142,60 +91,36 @@ nav a {
   transition: width 0.4s ease, background-color 0.3s ease; /* Smooth transition for both width and color change */
 }
 
-@media (max-width: 480px) {
-  .skill-bar {
-    height: 15px; /* Reduce bar height for small devices */
-  }
-
-  .skill-level {
-    border-radius: 15px; /* Keep a consistent shape */
-  }
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Animation keyframes */
-@keyframes fillProgress {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%; /* Controlled dynamically in inline style */
-  }
-}
-
-/* Responsive Grid for Projects */
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 0 auto;
+.projects-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project {
-  
-  padding: 15px;
-  text-align: center;
-  font-size: 30px;
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
 }
 
 .project a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
   background-color: #0b0c10;
   color: #45a29e;
   text-decoration: none;
-  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .project a:hover {
   background-color: #555;
-}
-
-@media (max-width: 500px) {
-  .project {
-    width: 100%; /* On smaller screens, make each project take up full width */
-  }
 }
 
 
@@ -211,118 +136,8 @@ nav a {
   color: white;
 }
 
-/* Project Titles */
-.project-title {
-  font-size: 40px; /* Adjust the font size for project titles */
-  font-weight: bold; /* Make the titles bold */
-  color: white; /* Optional: Change color to match your theme */
-  margin-bottom: 0.5rem; /* Add some spacing below the title */
-}
-
-/* Project Descriptions */
-.project-description {
-  font-size: 30px; /* Adjust the font size for project descriptions */
-  color: white; /* Change color for better readability */
-  margin-bottom: 1rem; /* Add spacing below the description */
-}
-
-/* Media Queries for Responsiveness */
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  .about,
-  .projects,
-  .contact {
-    padding: 1.5rem;
-  }
-  .contact a:hover {
-    color: #66fcf1;
-  }
-
-/* Responsive Grid for Projects */
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 0 auto;
-}
-
-/* Project Styles */
-.project {
-   /* Optional: Add border */
-  padding: 15px;
-  text-align: center;
-  font-size: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  /* Background color for the project box */
-  border-radius: 10px;
-}
-
-.project:hover {
-  transform: translateY(-10px); /* Lift the project box slightly upwards on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Add a shadow for depth on hover */
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #090909;
-  color: #15a340;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
-}
-
-.project a:hover {
-  background-color: #15a340; /* Lighter color on hover */
-  color: #000; /* Darker text color on hover */
-}
-
-/* Adding subtle animations to project content */
-.project img {
-  width: 110%; /* Make the image take the full width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Optional: Add rounded corners */
-  margin-bottom: 1rem; /* Space between image and description */
-  transition: transform 0.3s ease; /* Smooth image zoom effect */
-}
-
-.project:hover img {
-  transform: scale(1.05); /* Slightly zoom in the image on hover */
-}
-
-/* Project Titles */
-.project-title {
-  font-size: 40px; /* Adjust the font size for project titles */
-  font-weight: bold; /* Make the titles bold */
-  color: white; /* Optional: Change color to match your theme */
-  margin-bottom: 0.5rem; /* Add some spacing below the title */
-  transition: color 0.3s ease; /* Smooth color transition */
-  margin-left: 2rem;
-}
-
-.project:hover .project-title {
-  color: #66fcf1; /* Change color on hover */
-}
-
-/* Project Descriptions */
-.project-description {
-  font-size: 30px; /* Adjust the font size for project descriptions */
-  color: white; /* Change color for better readability */
-  margin-bottom: 1rem; /* Add spacing below the description */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.project:hover .project-description {
-  color: #66fcf1; /* Change color on hover */
+.contact a:hover {
+  color: #66fcf1;
 }
 
 /* Footer Styles */
@@ -361,12 +176,143 @@ nav a {
   margin-right: 8px; /* Space between icon and text */
 }
 
-.header .image-holder {
-  width: 300px; /* Adjust size as needed */
-  height: 300px;
-  margin: 0 auto 1rem; /* Center the image and add space below */
-  border-radius: 50%; /* Makes the image circular */
-  overflow: hidden; /* Ensures the image fits within the circle */
- 
+@media (max-width: 600px) {
+  section, header, footer {
+    padding: 2rem 1rem;
+  }
+
+  header nav {
+    font-size: 1rem;
+  }
+
+  header {
+    line-height: 1.2;
+  }
 }
 
+@media (min-width: 601px) {
+
+  h2 {
+    font-size: 4rem;
+  }
+  .image-holder img {
+    width: 30%;
+  }
+
+  header {
+    line-height: 1.2;
+  }
+
+  header nav {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 3rem;
+  }
+  
+  .about {
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 2rem;
+    padding: 0 15%;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 70%;
+  }
+
+  .contact, .footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .project {
+    width: 35%;
+  }
+  
+  .project-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .project {
+    /* Optional: Add border */
+   padding: 15px;
+   text-align: center;
+   font-size: 30px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
+   cursor: pointer; /* Change cursor to pointer on hover */
+   /* Background color for the project box */
+   border-radius: 10px;
+ }
+ 
+ .project:hover {
+   transform: translateY(-10px); /* Lift the project box slightly upwards on hover */
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Add a shadow for depth on hover */
+ }
+ 
+ .project a {
+   display: inline-block;
+   margin-top: 0.5rem;
+   padding: 0.5rem 1rem;
+   background-color: #090909;
+   color: #15a340;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+ }
+ 
+ .project a:hover {
+   background-color: #15a340; /* Lighter color on hover */
+   color: #000; /* Darker text color on hover */
+ }
+ 
+ /* Adding subtle animations to project content */
+ .project img {
+   transition: transform 0.3s ease; /* Smooth image zoom effect */
+ }
+ 
+ .project:hover img {
+   transform: scale(1.05); /* Slightly zoom in the image on hover */
+ }
+ 
+ /* Project Titles */
+ .project-title {
+   font-size: 40px; /* Adjust the font size for project titles */
+   font-weight: bold; /* Make the titles bold */
+   color: white; /* Optional: Change color to match your theme */
+   transition: color 0.3s ease; /* Smooth color transition */
+ }
+ 
+ .project:hover .project-title {
+   color: #66fcf1; /* Change color on hover */
+ }
+ 
+
+ .project-description {
+   font-size: 30px; 
+   color: white;
+   margin-bottom: 1rem; 
+   transition: color 0.3s ease; 
+ }
+ 
+ .project:hover .project-description {
+   color: #66fcf1; 
+ }
+
+ .joshua {
+  font-size: 2.5rem;
+ }
+}
